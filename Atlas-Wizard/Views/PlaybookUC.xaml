@@ -14,5 +14,6 @@
         <TextBlock Text="{Binding Playbook.Name}" />
         <TextBlock Text="{Binding Playbook.Description}" />
         <TextBlock Text="{Binding Playbook.InstallGuide}" />
+        <ui:Button>Options</ui:Button>
     </StackPanel>
 </UserControl>
