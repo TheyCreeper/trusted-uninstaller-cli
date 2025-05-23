@@ -31,8 +31,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Win32\Win32.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Helper\x64\Release\client-helper.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Include="$(MSBuildThisFileDirectory)Helper\Interop\x64\Release\client-helper.dll" />
   </ItemGroup>
 </Project>

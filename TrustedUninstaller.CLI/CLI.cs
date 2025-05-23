@@ -284,7 +284,7 @@ namespace TrustedUninstaller.CLI
 
         public static void ExtractArchive(string file, string targetDir)
         {
-            RunCommand($"x \"{file}\" -o\"{targetDir}\" -p\"wizard\" -y -aos");
+            RunCommand($"x \"{file}\" -o\"{targetDir}\" -p\"malte\" -y -aos");
         }
 
         private static void RunCommand(string command)

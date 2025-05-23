@@ -551,6 +551,8 @@ namespace TrustedUninstaller.Shared
             [XmlAttribute]
             public string DependsOn { get; set; } = null;
             [XmlAttribute]
+            public string WinVer { get; set; } = null;
+            [XmlAttribute]
             public bool IsRequired { get; set; } = false;
             public Line TopLine { get; set; } = null;
             public Line BottomLine { get; set; } = null;

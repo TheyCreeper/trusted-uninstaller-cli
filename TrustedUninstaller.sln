@@ -11,6 +11,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Interprocess", "Interproces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustedUninstaller.Shared", "TrustedUninstaller.Shared\TrustedUninstaller.Shared.csproj", "{9BDA9D32-E9A1-4DB8-9D90-443792107E28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas-Wizard", "Atlas-Wizard\Atlas-Wizard.csproj", "{3D7FE0CA-7794-4606-884E-3472EA6211A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -25,11 +27,21 @@ Global
 		{9BDA9D32-E9A1-4DB8-9D90-443792107E28}.Debug|x64.Build.0 = Debug|x64
 		{9BDA9D32-E9A1-4DB8-9D90-443792107E28}.Release|x64.ActiveCfg = Release|x64
 		{9BDA9D32-E9A1-4DB8-9D90-443792107E28}.Release|x64.Build.0 = Release|x64
+		{3D7FE0CA-7794-4606-884E-3472EA6211A4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3D7FE0CA-7794-4606-884E-3472EA6211A4}.Debug|x64.Build.0 = Debug|Any CPU
+		{3D7FE0CA-7794-4606-884E-3472EA6211A4}.Release|x64.ActiveCfg = Release|Any CPU
+		{3D7FE0CA-7794-4606-884E-3472EA6211A4}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA892C1E-4359-4EA2-896C-89C65B23423A}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Interprocess\Interprocess.projitems*{64b44592-888f-4c21-97ec-5dd7d84ed300}*SharedItemsImports = 13
+		Core\Core.projitems*{9bda9d32-e9a1-4db8-9d90-443792107e28}*SharedItemsImports = 4
+		Interprocess\Interprocess.projitems*{9bda9d32-e9a1-4db8-9d90-443792107e28}*SharedItemsImports = 4
+		Core\Core.projitems*{debb633c-f189-49ae-92dd-4eb71ceccf90}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
