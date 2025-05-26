@@ -91,6 +91,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utils\CommandPromptHelper.cs" />
+    <Compile Include="Utils\DisableDefender.cs" />
     <Compile Include="ViewModels\MainVM.cs" />
     <Compile Include="Views\Converter.cs" />
     <Compile Include="Views\FirstMenu.xaml.cs">
