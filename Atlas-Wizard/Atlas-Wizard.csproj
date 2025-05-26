@@ -92,9 +92,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\MainVM.cs" />
-    <Compile Include="ViewModels\PBOptionsVM.cs" />
-    <Compile Include="Views\PlaybookUC.xaml.cs">
-      <DependentUpon>PlaybookUC.xaml</DependentUpon>
+    <Compile Include="Views\Converter.cs" />
+    <Compile Include="Views\FirstMenu.xaml.cs">
+      <DependentUpon>FirstMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OptionsMenu.xaml.cs">
+      <DependentUpon>OptionsMenu.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -108,7 +111,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\PlaybookUC.xaml">
+    <Page Include="Views\FirstMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OptionsMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

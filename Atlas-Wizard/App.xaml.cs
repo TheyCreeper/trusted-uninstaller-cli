@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TrustedUninstaller.Shared;
 
 namespace Atlas_Wizard
 {
@@ -13,5 +14,8 @@ namespace Atlas_Wizard
     /// </summary>
     public partial class App : Application
     {
+        public static Playbook playbook;
+        public static MainWindow mainWindow;
+        public static string buildNumber;
     }
 }

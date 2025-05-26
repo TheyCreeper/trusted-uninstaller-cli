@@ -10,6 +10,8 @@
     Title="MainWindow"
     Width="800"
     Height="450"
+    MinHeight="450"
+    MinWidth="800"
     d:DataContext="{d:DesignInstance Type=viewmodel:MainVM}"
     ExtendsContentIntoTitleBar="True"
     WindowBackdropType="Mica"
@@ -17,34 +19,15 @@
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="215*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
         <ui:TitleBar
             x:Name="TitleBar"
             Title="{Binding ViewModel.ApplicationTitle}"
             Grid.Row="0"
             CloseWindowByDoubleClickOnIcon="True" />
-        <!--<ui:Button Background="Black" Click="Button_Click">Select playbook</ui:Button>-->
-        <ui:NavigationView
-            x:Name="NavigationView"
-            Padding="42,0,42,0"
-            BreadcrumbBar="{Binding ElementName=BreadcrumbBar}"
-            EnableDebugMessages="True"
-            FrameMargin="0"
-            IsBackButtonVisible="Visible"
-            IsPaneToggleVisible="False"
-            OpenPaneLength="310"
-            PaneDisplayMode="Left"
-            TitleBar="{Binding ElementName=TitleBar, Mode=OneWay}"
-            Transition="FadeInWithSlide">
-            <ui:NavigationView.ContentOverlay>
-                <Grid>
-                    <Frame x:Name="mainFrame" />
-                </Grid>
-            </ui:NavigationView.ContentOverlay>
-            <ui:NavigationView.MenuItems>
-                <StackPanel>
-                    <ui:Button Click="Button_Click" Content="Select a playbook" />
-                </StackPanel>
-            </ui:NavigationView.MenuItems>
-        </ui:NavigationView>
+        <Frame x:Name="MainFrame"/>
     </Grid>
 </ui:FluentWindow>

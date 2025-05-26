@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Atlas_Wizard.ViewModels;
 using Atlas_Wizard.Views;
+using Microsoft.Win32;
 using TrustedUninstaller.Shared;
 using Wpf.Ui.Controls;
 
@@ -30,34 +31,19 @@ namespace Atlas_Wizard
             InitializeComponent();
             mainVM = new MainVM();
             this.DataContext = mainVM;
+            App.mainWindow = this;
+            MainFrame.Content = new FirstMenu(mainVM);
+            RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+
+            App.buildNumber = registryKey.GetValue("CurrentBuild").ToString();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Options()
         {
-            // Configure save file dialog box
-            var dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.FileName = "Document"; // Default file name
-            dialog.DefaultExt = ".apbx"; // Default file extension
-            dialog.Filter = "Playbook (.apbx)|*.apbx"; // Filter files by extension
-
-            // Show save file dialog box
-            bool? result = dialog.ShowDialog();
-
-            // Process save file dialog box results
-            if (result == true)
-            {
-                // Save document
-                string filename = dialog.FileName;
-                ExtractAndCreate(filename);
-            }
+            mainVM.Playbook = App.playbook;
+            
+            MainFrame.Content = new OptionsMenu(mainVM);
         }
 
-        public void ExtractAndCreate(string path)
-        {
-            string tempPath = System.IO.Path.GetTempPath() + System.IO.Path.GetRandomFileName();
-            TrustedUninstaller.CLI.CLI.ExtractArchive(path, tempPath);
-            mainVM.Playbook = TrustedUninstaller.Shared.AmeliorationUtil.DeserializePlaybook(tempPath);
-            mainFrame.Content = new PlaybookUC(mainVM);
-        }
     }
 }
